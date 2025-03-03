@@ -5,15 +5,7 @@
 
 // Exercice 1.1 : Transforme la concaténation en interpolation de chaîne de caractères avec les backticks `
 function afficheAddresse(address) {
-  return (
-    "Votre adresse est : " +
-    address.street +
-    ", " +
-    address.city +
-    ", " +
-    address.country +
-    "."
-  );
+  return `l'adresse est ${address.street} ${address.city} ${address.country}.`;
 }
 
 console.log("Exercice 1.1");
@@ -24,7 +16,6 @@ console.log(
     country: "France",
   })
 );
-console.log(afficheAddresse`l'adresse est ${adresse}.`);
 
 // Exercice 1.2 : Utilise les chaînes multilignes avec les backticks ` pour afficher plus simplement le menu
 console.log("Exercice 1.2");
@@ -90,18 +81,19 @@ const roman = {
   ],
 };
 
-const {title1, editor1, tome1, type, author, mainCharacter1, characters1} = roman;
-
 // Exercices 2.3 : Décompose l'objet pour récupérer le titre, l'éditeur et le tome dans des constantes
-const title = roman.title;
-const editor = roman.editor;
-const tome = roman.tome;
+// const title = roman.title;
+// const editor = roman.editor;
+// const tome = roman.tome;
 
-const {title2, editor2, tome2} = roman;
-console.log(roman);
+const {title, editor, tome} = roman;
+
+console.log(title);
+console.log(editor);
+console.log(tome);
 
 console.log("Exercice 2.3");
-console.log(title, editor, tome);
+console.log(title);
 
 // Exercice 2.4 : Décompose l'objet pour récupérer le nom du personnage principal,
 // le nom du premier personnage secondaire
@@ -124,9 +116,10 @@ let lastname = "Doe";
 
 // Exercice 2.5 : Faites l'inversion du prénom et nom avec la décomposition
 // plutôt qu'avoir une variable temporaire
-let temp = firstname;
-firstname = lastname;
-lastname = temp;
+// let temp = firstname;
+// firstname = lastname;
+// lastname = temp;
+[lastname, firstname] = [firstname, lastname];
 
 console.log("Exercice 2.5");
 console.log(firstname, lastname);
@@ -140,8 +133,9 @@ const person = {
 };
 
 // Exercice 2.6 : Fais une décomposition du paramètre pour extraire directement le prénom et le nom
-function hello(person) {
-  console.log(`Bonjour ${person.firstname} ${person.lastname} !`);
+function hello(p) {
+  const {firstname, lastname} = p;
+  console.log(`Bonjour ${firstname} ${lastname} !`);
 }
 
 console.log("Exercice 2.6");
