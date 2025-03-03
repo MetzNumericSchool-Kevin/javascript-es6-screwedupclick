@@ -24,7 +24,7 @@ console.log(
     country: "France",
   })
 );
-console.log(afficheAddresse`l'adresse est ${adresse}.`)
+console.log(afficheAddresse`l'adresse est ${adresse}.`);
 
 // Exercice 1.2 : Utilise les chaînes multilignes avec les backticks ` pour afficher plus simplement le menu
 console.log("Exercice 1.2");
@@ -35,7 +35,7 @@ console.log(
 console.log(`Menu de la semaine
   Pâte à tartine
   Hoagie
-  Salade de pommes`)
+  Salade de pommes`);
 
 /**
  * Exercice 2
@@ -50,12 +50,18 @@ const green = colors[1];
 const blue = colors[2];
 const yellow = colors[3];
 
+const [r, g, b, y] = colors;
+
 console.log("Exercice 2.1");
 console.log(red, green, blue, yellow);
 
 // Exercice 2.2 : La même chose, mais en ignorant ici "Red" et "Yellow"
 const green2 = colors[1];
 const blue2 = colors[2];
+
+const [ , g1, b1, ] = colors;
+
+console.log()
 
 console.log("Exercice 2.2");
 console.log(green2, blue2);
