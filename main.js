@@ -59,7 +59,7 @@ console.log(red, green, blue, yellow);
 const green2 = colors[1];
 const blue2 = colors[2];
 
-const [ , g1, b1, ] = colors;
+const [ , g2, b2, ] = colors;
 
 console.log()
 
@@ -90,10 +90,15 @@ const roman = {
   ],
 };
 
+const {title1, editor1, tome1, type, author, mainCharacter1, characters1} = roman;
+
 // Exercices 2.3 : Décompose l'objet pour récupérer le titre, l'éditeur et le tome dans des constantes
 const title = roman.title;
 const editor = roman.editor;
 const tome = roman.tome;
+
+const {title2, editor2, tome2} = roman;
+console.log(roman);
 
 console.log("Exercice 2.3");
 console.log(title, editor, tome);
