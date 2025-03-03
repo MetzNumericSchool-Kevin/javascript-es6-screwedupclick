@@ -24,12 +24,18 @@ console.log(
     country: "France",
   })
 );
+console.log(afficheAddresse`l'adresse est ${adresse}.`)
 
 // Exercice 1.2 : Utilise les chaînes multilignes avec les backticks ` pour afficher plus simplement le menu
 console.log("Exercice 1.2");
 console.log(
   "Menu de la semaine :\n    - Pâte à tartine\n    - Hoagie\n    - Salade de pommes"
 );
+
+console.log(`Menu de la semaine
+  Pâte à tartine
+  Hoagie
+  Salade de pommes`)
 
 /**
  * Exercice 2
